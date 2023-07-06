@@ -67,6 +67,13 @@ public:
         std::cerr << "Error the size of the constraint is not correct in ConstraintBilateral size=" << cst->size() << std::endl;
         return NULL;
     }
+
+protected:
+
+    sofa::type::vector<std::string> getBaseConstraintIdentifiers() override final
+    {
+        return { "Bilateral" };
+    }
 };
 
 }

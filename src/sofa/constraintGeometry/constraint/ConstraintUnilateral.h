@@ -57,6 +57,12 @@ public:
         return NULL;
     }
 
+protected:
+
+    sofa::type::vector<std::string> getBaseConstraintIdentifiers() override final
+    {
+        return { "Unilateral" };
+    }
 };
 
 }
